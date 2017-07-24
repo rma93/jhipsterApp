@@ -1,0 +1,24 @@
+{
+    "prueba3App": {
+        "tapas" : {
+            "home": {
+                "title": "Tapas",
+                "createLabel": "Create a new Tapas",
+                "createOrEditLabel": "Create or edit a Tapas"
+            },
+            "created": "A new Tapas is created with identifier {{ param }}",
+            "updated": "A Tapas is updated with identifier {{ param }}",
+            "deleted": "A Tapas is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Tapas {{ id }}?"
+            },
+            "detail": {
+                "title": "Tapas"
+            },
+            "idtapa": "Idtapa",
+            "nombre": "Nombre",
+            "ingrediente": "Ingrediente",
+            "alergenos": "Alergenos"
+        }
+    }
+}

@@ -1,0 +1,65 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTapasLabel" data-translate="prueba3App.tapas.home.createOrEditLabel">Create or edit a Tapas</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.tapas.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.tapas.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="prueba3App.tapas.idtapa" for="field_idtapa">Idtapa</label>
+            <input type="number" class="form-control" name="idtapa" id="field_idtapa"
+                    ng-model="vm.tapas.idtapa"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="prueba3App.tapas.nombre" for="field_nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="field_nombre"
+                    ng-model="vm.tapas.nombre"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="prueba3App.tapas.ingrediente" for="field_ingrediente">Ingrediente</label>
+            <input type="text" class="form-control" name="ingrediente" id="field_ingrediente"
+                    ng-model="vm.tapas.ingrediente"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="prueba3App.tapas.alergenos" for="field_alergenos">Alergenos</label>
+            <select class="form-control" name="alergenos" ng-model="vm.tapas.alergenos" id="field_alergenos">
+                <option value="LACTEOS" data-translate="prueba3App.Alergenos.LACTEOS">LACTEOS</option>
+                <option value="CRUSTACEOS" data-translate="prueba3App.Alergenos.CRUSTACEOS">CRUSTACEOS</option>
+                <option value="GLUTEN" data-translate="prueba3App.Alergenos.GLUTEN">GLUTEN</option>
+                <option value="HUEVOS" data-translate="prueba3App.Alergenos.HUEVOS">HUEVOS</option>
+                <option value="PESCADO" data-translate="prueba3App.Alergenos.PESCADO">PESCADO</option>
+                <option value="CACAHUTES" data-translate="prueba3App.Alergenos.CACAHUTES">CACAHUTES</option>
+                <option value="SOJA" data-translate="prueba3App.Alergenos.SOJA">SOJA</option>
+                <option value="CASCARA" data-translate="prueba3App.Alergenos.CASCARA">CASCARA</option>
+                <option value="APIO" data-translate="prueba3App.Alergenos.APIO">APIO</option>
+                <option value="MOSTAZA" data-translate="prueba3App.Alergenos.MOSTAZA">MOSTAZA</option>
+                <option value="SESAMO" data-translate="prueba3App.Alergenos.SESAMO">SESAMO</option>
+                <option value="AZUFRE" data-translate="prueba3App.Alergenos.AZUFRE">AZUFRE</option>
+                <option value="MOLUSCOS" data-translate="prueba3App.Alergenos.MOLUSCOS">MOLUSCOS</option>
+                <option value="ALTRAMUCES" data-translate="prueba3App.Alergenos.ALTRAMUCES">ALTRAMUCES</option>
+                <option value="VEGANAS" data-translate="prueba3App.Alergenos.VEGANAS">VEGANAS</option>
+                <option value="VEGETARIARO" data-translate="prueba3App.Alergenos.VEGETARIARO">VEGETARIARO</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

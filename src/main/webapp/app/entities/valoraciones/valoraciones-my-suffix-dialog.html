@@ -1,0 +1,60 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myValoracionesLabel" data-translate="prueba3App.valoraciones.home.createOrEditLabel">Create or edit a Valoraciones</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.valoraciones.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.valoraciones.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="prueba3App.valoraciones.puntuacion" for="field_puntuacion">Puntuacion</label>
+            <input type="number" class="form-control" name="puntuacion" id="field_puntuacion"
+                    ng-model="vm.valoraciones.puntuacion"
+                    required/>
+            <div ng-show="editForm.puntuacion.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.puntuacion.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.puntuacion.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="prueba3App.valoraciones.comentario" for="field_comentario">Comentario</label>
+            <input type="text" class="form-control" name="comentario" id="field_comentario"
+                    ng-model="vm.valoraciones.comentario"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="prueba3App.valoraciones.ubicacionLatRest" for="field_ubicacionLatRest">Ubicacion Lat Rest</label>
+            <input type="text" class="form-control" name="ubicacionLatRest" id="field_ubicacionLatRest"
+                    ng-model="vm.valoraciones.ubicacionLatRest"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="prueba3App.valoraciones.ubicacionLongRest" for="field_ubicacionLongRest">Ubicacion Long Rest</label>
+            <input type="text" class="form-control" name="ubicacionLongRest" id="field_ubicacionLongRest"
+                    ng-model="vm.valoraciones.ubicacionLongRest"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

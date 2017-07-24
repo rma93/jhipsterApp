@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "idtapa",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ingrediente",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "alergenos",
+            "fieldType": "Alergenos",
+            "fieldValues": "LACTEOS,CRUSTACEOS,GLUTEN,HUEVOS,PESCADO,CACAHUTES,SOJA,CASCARA,APIO,MOSTAZA,SESAMO,AZUFRE,MOLUSCOS,ALTRAMUCES,VEGANAS,VEGETARIARO"
+        }
+    ],
+    "changelogDate": "20170710205316",
+    "entityTableName": "tapas",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "angularJSSuffix": "mySuffix"
+}

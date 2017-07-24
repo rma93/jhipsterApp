@@ -1,0 +1,23 @@
+{
+    "prueba3App": {
+        "Alergenos" : {
+            "null": "",
+            "LACTEOS": "LACTEOS",
+            "CRUSTACEOS": "CRUSTACEOS",
+            "GLUTEN": "GLUTEN",
+            "HUEVOS": "HUEVOS",
+            "PESCADO": "PESCADO",
+            "CACAHUTES": "CACAHUTES",
+            "SOJA": "SOJA",
+            "CASCARA": "CASCARA",
+            "APIO": "APIO",
+            "MOSTAZA": "MOSTAZA",
+            "SESAMO": "SESAMO",
+            "AZUFRE": "AZUFRE",
+            "MOLUSCOS": "MOLUSCOS",
+            "ALTRAMUCES": "ALTRAMUCES",
+            "VEGANAS": "VEGANAS",
+            "VEGETARIARO": "VEGETARIARO"
+        }
+    }
+}

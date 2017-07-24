@@ -1,0 +1,52 @@
+
+<div>
+    <h2><span data-translate="prueba3App.usuario.detail.title">Usuario</span> {{vm.usuario.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="prueba3App.usuario.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.usuario.nombre}}</span>
+        </dd>
+        <dt><span data-translate="prueba3App.usuario.apellido1">Apellido 1</span></dt>
+        <dd>
+            <span>{{vm.usuario.apellido1}}</span>
+        </dd>
+        <dt><span data-translate="prueba3App.usuario.apellido2">Apellido 2</span></dt>
+        <dd>
+            <span>{{vm.usuario.apellido2}}</span>
+        </dd>
+        <dt><span data-translate="prueba3App.usuario.edad">Edad</span></dt>
+        <dd>
+            <span>{{vm.usuario.edad}}</span>
+        </dd>
+        <dt><span data-translate="prueba3App.usuario.email">Email</span></dt>
+        <dd>
+            <span>{{vm.usuario.email}}</span>
+        </dd>
+        <dt><span data-translate="prueba3App.usuario.calle">Calle</span></dt>
+        <dd>
+            <span>{{vm.usuario.calle}}</span>
+        </dd>
+        <dt><span data-translate="prueba3App.usuario.foto">Foto</span></dt>
+        <dd>
+            <div ng-if="vm.usuario.foto">
+                <a ng-click="vm.openFile(vm.usuario.fotoContentType, vm.usuario.foto)">
+                    <img data-ng-src="{{'data:' + vm.usuario.fotoContentType + ';base64,' + vm.usuario.foto}}" style="max-width: 100%;" alt="usuario image"/>
+                </a>
+                {{vm.usuario.fotoContentType}}, {{vm.byteSize(vm.usuario.foto)}}
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="usuario-my-suffix-detail.edit({id:vm.usuario.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

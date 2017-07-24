@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "puntuacion",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "comentario",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ubicacionLatRest",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ubicacionLongRest",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170710205318",
+    "entityTableName": "valoraciones",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "angularJSSuffix": "mySuffix"
+}

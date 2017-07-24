@@ -1,0 +1,52 @@
+
+enum Idioma {
+    FRENCH, ENGLISH, SPANISH
+}
+
+enum Alergenos{
+	LACTEOS, CRUSTACEOS, GLUTEN, HUEVOS, PESCADO, CACAHUTES, SOJA, CASCARA, APIO, MOSTAZA, SESAMO, AZUFRE, MOLUSCOS, ALTRAMUCES, VEGANAS, VEGETARIARO
+}
+
+entity Restaurante{
+	direccion String required,
+	nombre String required,
+    ubicacionLat String required,
+    ubicacionLong String required
+}
+entity Tapas{
+	id_tapa Integer,
+	nombre String,
+    ingrediente String,
+    alergenos Alergenos
+}
+
+entity Usuario{
+	nombre String required,
+    apellido1 String required,
+    apellido2 String,
+    edad Long,
+    email String required,
+    calle String,
+    foto ImageBlob
+}
+
+entity Valoraciones{
+puntuacion Long required,
+comentario String,
+ubicacionLatRest String,
+ubicacionLongRest String
+
+}
+
+
+// Set pagination options
+paginate Restaurante, Tapas with infinite-scroll
+paginate Usuario with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+// Set an angular suffix
+angularSuffix * with mySuffix
+

@@ -1,0 +1,27 @@
+{
+    "prueba3App": {
+        "usuario" : {
+            "home": {
+                "title": "Usuarios",
+                "createLabel": "Créer un nouveau Usuario",
+                "createOrEditLabel": "Créer ou éditer un Usuario"
+            },
+            "created": "Un nouveau Usuario a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Usuario avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Usuario avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Usuario {{ id }} ?"
+            },
+            "detail": {
+                "title": "Usuario"
+            },
+            "nombre": "Nombre",
+            "apellido1": "Apellido 1",
+            "apellido2": "Apellido 2",
+            "edad": "Edad",
+            "email": "Email",
+            "calle": "Calle",
+            "foto": "Foto"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "prueba3App": {
+        "restaurante" : {
+            "home": {
+                "title": "Restaurantes",
+                "createLabel": "Créer un nouveau Restaurante",
+                "createOrEditLabel": "Créer ou éditer un Restaurante"
+            },
+            "created": "Un nouveau Restaurante a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Restaurante avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Restaurante avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Restaurante {{ id }} ?"
+            },
+            "detail": {
+                "title": "Restaurante"
+            },
+            "direccion": "Direccion",
+            "nombre": "Nombre",
+            "ubicacionLat": "Ubicacion Lat",
+            "ubicacionLong": "Ubicacion Long"
+        }
+    }
+}

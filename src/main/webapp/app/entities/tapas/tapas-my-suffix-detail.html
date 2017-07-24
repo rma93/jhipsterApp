@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="prueba3App.tapas.detail.title">Tapas</span> {{vm.tapas.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="prueba3App.tapas.idtapa">Idtapa</span></dt>
+        <dd>
+            <span>{{vm.tapas.idtapa}}</span>
+        </dd>
+        <dt><span data-translate="prueba3App.tapas.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.tapas.nombre}}</span>
+        </dd>
+        <dt><span data-translate="prueba3App.tapas.ingrediente">Ingrediente</span></dt>
+        <dd>
+            <span>{{vm.tapas.ingrediente}}</span>
+        </dd>
+        <dt><span data-translate="prueba3App.tapas.alergenos">Alergenos</span></dt>
+        <dd>
+            <span data-translate="{{'prueba3App.Alergenos.' + vm.tapas.alergenos}}">{{vm.tapas.alergenos}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tapas-my-suffix-detail.edit({id:vm.tapas.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

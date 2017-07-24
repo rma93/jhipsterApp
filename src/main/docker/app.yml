@@ -1,0 +1,23 @@
+version: '2'
+services:
+    prueba3-app:
+        image: prueba3
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config
+            - SPRING_DATA_MONGODB_URI=mongodb://prueba3-mongodb:27017
+            - SPRING_DATA_MONGODB_DATABASE=prueba3
+            - JHIPSTER_SLEEP=30 # gives time for the JHipster Registry to boot before the application
+        ports:
+            - 8080:8080
+    prueba3-mongodb:
+        extends:
+            file: mongodb.yml
+            service: prueba3-mongodb
+    jhipster-registry:
+        extends:
+            file: jhipster-registry.yml
+            service: jhipster-registry
+        environment:
+            - SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS=file:./central-config/docker-config/

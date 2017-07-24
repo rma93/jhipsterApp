@@ -1,0 +1,24 @@
+{
+    "prueba3App": {
+        "tapas" : {
+            "home": {
+                "title": "Tapas",
+                "createLabel": "Créer un nouveau Tapas",
+                "createOrEditLabel": "Créer ou éditer un Tapas"
+            },
+            "created": "Un nouveau Tapas a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Tapas avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Tapas avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Tapas {{ id }} ?"
+            },
+            "detail": {
+                "title": "Tapas"
+            },
+            "idtapa": "Idtapa",
+            "nombre": "Nombre",
+            "ingrediente": "Ingrediente",
+            "alergenos": "Alergenos"
+        }
+    }
+}
